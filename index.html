@@ -28,11 +28,14 @@
         </div>
     </header>
     <main>
+        <div class="frete-bar">
+            🚚 Frete Grátis em todo o Brasil!
+        </div>
         <h1>Produtos em destaque</h1>
         <p>Seleção curada de produtos com descrições breves e preços.</p>
        
-        <section class="products">
-            <link rel="stylesheet" href="#produtos">
+        <div class="carousel">
+            <div class="carousel-wrapper">
             <article class="product">
                 <img src="img/camisa.png" alt="Produto 1">
                 <div class="product-body">
@@ -85,8 +88,18 @@
                     <p class="desc">Bola de futebol Adidas modelo oficial “Final Kyiv 2018”, com design moderno em estrelas e acabamento de alta qualidade. Ideal para jogos e treinos, oferece ótima durabilidade, controle preciso e excelente desempenho em campo. Perfeita para quem busca estilo e performance..</p>
                     <div class="meta"><span class="price">R$ 109,90</span><button class="btn">Comprar</button></div>
                 </div>
-            </article>
-        </section>
+            </div>
+            <button class="carousel-btn prev" aria-label="Produto anterior">&lt;</button>
+            <button class="carousel-btn next" aria-label="Próximo produto">&gt;</button>
+            <div class="carousel-indicators">
+                <span class="indicator active" data-slide="0"></span>
+                <span class="indicator" data-slide="1"></span>
+                <span class="indicator" data-slide="2"></span>
+                <span class="indicator" data-slide="3"></span>
+                <span class="indicator" data-slide="4"></span>
+                <span class="indicator" data-slide="5"></span>
+            </div>
+        </div>
 
     </main>
     <section id="sobre">

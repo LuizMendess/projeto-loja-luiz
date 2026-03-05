@@ -1,8 +1,28 @@
-:root{--bg:#ffffff;--muted:#6b7280;--accent:#111827}
-*{box-sizing:border-box}
-html, body{height:100%}
-body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:white;-webkit-font-smoothing:antialiased}
-header{
+/* Variáveis CSS */
+:root {
+    --bg: #ffffff;
+    --muted: #6b7280;
+    --accent: #111827;
+}
+
+/* Reset e estilos globais */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Header */
+header {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -11,51 +31,102 @@ header{
     z-index: 100;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
-.header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:1rem}
-.logo{font-weight:700;color: #ffffff;text-decoration:none;font-size:1.2rem;letter-spacing:1px}
-.logo span{font-weight:400;color: #2ef8f8;margin-left:6px}
-nav{display:flex;gap:1rem}
-nav a{color:#2ef8f8;text-decoration:none;font-weight:600;font-size:0.95rem;transition:color 0.3s ease}
-nav a:hover{color:#ffffff;text-shadow:0 0 10px rgba(46, 248, 248, 0.5)}
-.nav-toggle{display:none;background:none;border:0;padding:6px;cursor:pointer}
-.nav-toggle span{display:block;width:20px;height:2px;background:#ffffff;margin:4px 0;border-radius:2px;transition:all 0.3s ease}
-@media (max-width:640px){
-    nav{display:none;position:absolute;left:0;right:0;top:100%;background:rgba(255, 255, 255, 0.1);backdrop-filter:blur(10px);flex-direction:column;padding:0.75rem 1rem;border-bottom:1px solid rgba(255, 255, 255, 0.2)}
-    nav.show{display:flex}
-    .nav-toggle{display:block}
-    main{margin:1rem auto;padding:0.5rem}
-    section{margin:1rem auto;padding:0.5rem}
-    #sobre{padding:1rem; margin:1rem auto;}
-    #sobre h2{font-size:1.5rem;}
-    #sobre p{font-size:1rem;}
-    #contato{padding:1rem; margin:1rem auto;}
-    #contato h2{font-size:1.5rem;}
-    .contato-info p{font-size:1rem;}
-    .contato-form h3{font-size:1.2rem;}
-    .mapa h3{font-size:1.2rem;}
-    .contato-container{flex-direction:column;}
-    .contato-left{text-align:center;}
-}
-main{max-width:1100px;margin:2rem auto;padding:1rem}
 
-/* Design moderno para main (produtos em destaque) */
+.header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.logo {
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    font-weight: 400;
+    color: #2ef8f8;
+    margin-left: 6px;
+}
+
+/* Navegação */
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: #2ef8f8;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(46, 248, 248, 0.5);
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #ffffff;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Main */
 main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 1rem;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 15px;
-    padding: 2rem;
-    margin: 2rem auto;
-    max-width: 1100px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.frete-bar {
+    background: #2ef8f8;
+    color: #111827;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(46, 248, 248, 0.4);
 }
 
 main h1, main p {
     color: white;
 }
-section{max-width:1100px;margin:2rem auto;padding:1rem}
 
-/* Design moderno para a seção Sobre */
+/* Seções */
+section {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
 #sobre {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -80,7 +151,6 @@ section{max-width:1100px;margin:2rem auto;padding:1rem}
     margin: 0.5rem 0;
 }
 
-/* Design moderno para a seção Contato */
 #contato {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -178,31 +248,146 @@ section{max-width:1100px;margin:2rem auto;padding:1rem}
     height: 300px;
 }
 
-/* Produtos - layout minimalista e neutro */
-.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1.25rem}
-.product{background:none;border:1px solid rgba(255,255,255,0.2);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
-.product:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,0.3)}
-.product img{width:100%;height:160px;object-fit:contain;display:block}
-.product-body{padding:0.9rem 1rem 1.1rem;display:flex;flex-direction:column;gap:0.6rem}
-.product h3{margin:0;font-size:1rem;color:white}
-.product .desc{margin:0;color:#d1d5db;font-size:0.92rem;line-height:1.3}
-.meta{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
-.price{font-weight:700;color:white}
-.btn{background:#111827;color:#fff;border:0;padding:.45rem .7rem;border-radius:8px;cursor:pointer;font-weight:600}
-.btn:hover{opacity:.95}
-
-@media (max-width:420px){
-    .product img{height:140px}
-    .products{gap:0.5rem}
-    .product-body{padding:0.7rem 0.8rem 0.9rem}
-    #sobre h2{font-size:1.2rem;}
-    #sobre p{font-size:0.9rem;}
-    #contato h2{font-size:1.2rem;}
-    .contato-info p{font-size:0.9rem;}
-    .contato-form h3{font-size:1rem;}
-    .mapa h3{font-size:1rem;}
+/* Produtos */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: calc(220px * 6); /* Largura de cada produto * número de produtos */
+}
+
+.product {
+    flex: 0 0 220px; /* Largura fixa para cada produto */
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform .18s ease, box-shadow .18s ease;
+    margin-right: 1rem; /* Espaço entre produtos */
+}
+
+.product:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.product img {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    display: block;
+}
+
+.product-body {
+    padding: 0.9rem 1rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.product h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: white;
+}
+
+.product .desc {
+    margin: 0;
+    color: #d1d5db;
+    font-size: 0.92rem;
+    line-height: 1.3;
+}
+
+.meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.price {
+    font-weight: 700;
+    color: white;
+}
+
+.btn {
+    background: #111827;
+    color: #fff;
+    border: 0;
+    padding: .45rem .7rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn:hover {
+    opacity: .95;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: #2ef8f8;
+    font-size: 1.5rem;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-btn:hover {
+    background: rgba(46, 248, 248, 0.2);
+    border-color: #2ef8f8;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 0 15px rgba(46, 248, 248, 0.5);
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 0.5rem;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.indicator.active {
+    background: #2ef8f8;
+}
+
+/* Vídeo de fundo */
 #background-video {
     position: fixed;
     top: 0;
@@ -247,12 +432,145 @@ section{max-width:1100px;margin:2rem auto;padding:1rem}
     visibility: visible;
 }
 
-@media (max-width:640px){
+/* Media queries */
+@media (max-width: 640px) {
+    nav {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    main {
+        margin: 1rem auto;
+        padding: 0.5rem;
+    }
+
+    .frete-bar {
+        font-size: 1rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    section {
+        margin: 1rem auto;
+        padding: 0.5rem;
+    }
+
+    #sobre {
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+
+    #sobre h2 {
+        font-size: 1.5rem;
+    }
+
+    #sobre p {
+        font-size: 1rem;
+    }
+
+    #contato {
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+
+    #contato h2 {
+        font-size: 1.5rem;
+    }
+
+    .contato-info p {
+        font-size: 1rem;
+    }
+
+    .contato-form h3 {
+        font-size: 1.2rem;
+    }
+
+    .mapa h3 {
+        font-size: 1.2rem;
+    }
+
+    .contato-container {
+        flex-direction: column;
+    }
+
+    .contato-left {
+        text-align: center;
+    }
+
     #scrollToTop {
         bottom: 1rem;
         right: 1rem;
         width: 45px;
         height: 45px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .product img {
+        height: 140px;
+    }
+
+    .products {
+        gap: 0.5rem;
+    }
+
+    .product-body {
+        padding: 0.7rem 0.8rem 0.9rem;
+    }
+
+    #sobre h2 {
+        font-size: 1.2rem;
+    }
+
+    #sobre p {
+        font-size: 0.9rem;
+    }
+
+    #contato h2 {
+        font-size: 1.2rem;
+    }
+
+    .contato-info p {
+        font-size: 0.9rem;
+    }
+
+    .contato-form h3 {
+        font-size: 1rem;
+    }
+
+    .mapa h3 {
+        font-size: 1rem;
+    }
+
+    /* Carousel mobile */
+    .carousel-wrapper {
+        width: calc(220px * 6); /* Mesmo que desktop, mas ajustar se necessário */
+    }
+
+    .product {
+        flex: 0 0 200px; /* Menor em mobile */
+        margin-right: 0.5rem;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
         font-size: 1.2rem;
     }
 }
